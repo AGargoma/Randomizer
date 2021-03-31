@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('randomizer/', include('randomizer.urls')),
+    path('', include('randomizer.urls')),
     path('admin/', admin.site.urls),
 ]
