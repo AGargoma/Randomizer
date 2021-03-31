@@ -1,0 +1,16 @@
+<html>
+
+<div style="text-align: center">
+<form action="{% url 'randomizer'%}" method="get">
+{% csrf_token %}
+    <input type="text" placeholder="start" id="start" name="start"
+           {% if start %}value={{ start }}{% endif %}>
+    <input type="text" placeholder="end" id="end" name="end"
+           {% if end %}value={{ end }}{% endif %} > <br>
+    <input type="text" placeholder="count" id="count" name="count"
+           {% if count %}value={{ count }}{% endif %}> <br>
+    <input type="submit" value="Randomize">
+</form>
+{% if range %} {{ output }} {% endif %}
+</div>
+</html>
