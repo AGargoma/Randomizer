@@ -1,1 +1,1 @@
-web: gunicorn randomizer.wsgi 
+web: gunicorn Randomizer.wsgi 
